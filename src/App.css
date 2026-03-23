@@ -194,7 +194,7 @@
   box-shadow:
     0 22px 60px rgba(16, 24, 40, 0.14),
     0 0 0 1px rgba(255, 107, 107, 0.08) inset;
-  animation: heroCardIn 900ms ease-out both, cardBreath 4.8s ease-in-out infinite;
+  animation: heroCardIn 900ms ease-out both, cardBreath 9s ease-in-out infinite;
 }
 
 .heroCardHeader {
@@ -251,7 +251,7 @@
   margin: 6px 0 12px;
   display: grid;
   place-items: center;
-  animation: mascotFloat 3.2s ease-in-out infinite;
+  animation: mascotFloat 4.2s ease-in-out infinite;
 }
 
 .mascotSvg {
@@ -426,7 +426,7 @@
   transform: translateX(-40%);
   opacity: 0.9;
   pointer-events: none;
-  animation: shimmerMove 2.2s ease-in-out infinite;
+  animation: shimmerMove 3.4s ease-in-out infinite;
 }
 
 .stepNum {
@@ -655,7 +655,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-3px);
   }
   100% {
     transform: translateY(0);
@@ -667,7 +667,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
   }
   100% {
     transform: translateY(0);
@@ -677,7 +677,7 @@
 @keyframes sectionIn {
   0% {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
@@ -687,10 +687,10 @@
 
 @keyframes shimmerMove {
   0% {
-    transform: translateX(-55%);
+    transform: translateX(-40%);
   }
   100% {
-    transform: translateX(55%);
+    transform: translateX(40%);
   }
 }
 

@@ -98,10 +98,15 @@ function RhinoMascot() {
         strokeLinejoin="round"
       />
       {/* Eyes */}
-      <circle cx="98" cy="98" r="11" fill="#0F2233" />
-      <circle cx="136" cy="98" r="11" fill="#0F2233" opacity="0.95" />
-      <circle cx="94" cy="94" r="3.2" fill="#ffffff" opacity="0.9" />
-      <circle cx="132" cy="94" r="3.2" fill="#ffffff" opacity="0.9" />
+      {/* Anime-style eyes */}
+      <circle cx="98" cy="98" r="12" fill="rgba(255,255,255,0.95)" />
+      <circle cx="136" cy="98" r="12" fill="rgba(255,255,255,0.95)" />
+      <circle cx="98" cy="98" r="8.2" fill="#2B4C6A" />
+      <circle cx="136" cy="98" r="8.2" fill="#2B4C6A" opacity="0.95" />
+      <circle cx="98" cy="98" r="4.1" fill="#0F2233" />
+      <circle cx="136" cy="98" r="4.1" fill="#0F2233" opacity="0.95" />
+      <circle cx="94.2" cy="94.4" r="2.1" fill="#ffffff" opacity="0.95" />
+      <circle cx="132.2" cy="94.4" r="2.1" fill="#ffffff" opacity="0.95" />
 
       {/* Mouth */}
       <path
@@ -188,13 +193,13 @@ function App() {
         <section className="hero">
           <div className="heroGrid">
             <div className="heroCopy">
-              <div className="eyebrow">Học cùng tê giác</div>
+              <div className="eyebrow">Khám phá tê giác và bài toán bảo tồn</div>
               <h1 className="heroTitle">
-                Tê giác cần bạn nhỏ!
+                Tê giác cần được bảo vệ bền vững
               </h1>
               <p className="heroLead">
-                Tê giác giúp rừng khỏe mạnh. Cùng tìm hiểu và học 3 việc nhỏ để
-                giúp tê giác an toàn hơn nhé.
+                Trong báo cáo infographic này, bạn sẽ thấy vì sao tê giác quan
+                trọng và đâu là 3 việc thiết thực để góp phần bảo tồn.
               </p>
 
               <div className="heroButtons">
@@ -213,32 +218,32 @@ function App() {
                   Xem điều nguy hiểm
                 </button>
               </div>
-
-              <div className="heroNote">
-                Trang học vui: nội dung minh họa (demo).
-              </div>
             </div>
 
             <aside className="heroCard" aria-label="Thông tin nhanh">
               <div className="heroCardHeader">
-                <div className="chip">Bé làm được lắm!</div>
-                <div className="heroCardTitle">Chọn một việc nhỏ ngay hôm nay</div>
+                <div className="chip">Gợi ý nhanh</div>
+                <div className="heroCardTitle">
+                  Chọn 1 việc phù hợp với bạn
+                </div>
               </div>
               <div className="mascotWrap" aria-hidden="true">
                 <RhinoMascot />
               </div>
               <div className="heroStats">
                 <div className="stat">
-                  <div className="statLabel">Bài học</div>
-                  <div className="statValue">Rừng cần tê giác</div>
+                  <div className="statLabel">Ý nghĩa</div>
+                  <div className="statValue">
+                    Tê giác và cân bằng hệ sinh thái
+                  </div>
                 </div>
                 <div className="stat">
-                  <div className="statLabel">Để ý điều gì?</div>
-                  <div className="statValue">Không làm điều sai</div>
+                  <div className="statLabel">Lưu ý</div>
+                  <div className="statValue">Hiểu đúng để lan tỏa đúng</div>
                 </div>
                 <div className="stat">
-                  <div className="statLabel">Bạn có thể</div>
-                  <div className="statValue">Chia sẻ và học cùng</div>
+                  <div className="statLabel">Việc nhỏ</div>
+                  <div className="statValue">Chia sẻ và hành động vừa sức</div>
                 </div>
               </div>
               <div className="heroCardFooter">
@@ -247,7 +252,7 @@ function App() {
                   className="btn btnCard"
                   onClick={() => scrollTo('actions')}
                 >
-                  Xem 3 việc bạn làm
+                  Xem 3 việc thiết thực
                 </button>
               </div>
             </aside>
@@ -257,33 +262,33 @@ function App() {
         <section className="section" id="why">
           <div className="sectionInner">
             <div className="sectionHead">
-              <h2 className="sectionTitle">Tê giác giúp rừng khỏe mạnh!</h2>
+              <h2 className="sectionTitle">Tê giác và cân bằng sinh thái</h2>
               <p className="sectionDesc">
-                Khi tê giác được bảo vệ, nhiều loài khác cũng có nơi ở và nguồn
-                thức ăn tốt hơn.
+                Khi quần thể được bảo vệ, nhiều loài khác cũng có cơ hội sống ổn
+                định hơn trong hệ sinh thái.
               </p>
             </div>
 
             <div className="grid grid3">
               <div className="card">
                 <div className="cardIcon">🌿</div>
-                <h3 className="cardTitle">Giữ cân bằng trong rừng</h3>
+                <h3 className="cardTitle">Duy trì nhịp hệ sinh thái</h3>
                 <p className="cardText">
-                  Tê giác sống an toàn giúp rừng duy trì nhịp sống tự nhiên.
+                  Nơi sống an toàn giúp các loài khác tìm thức ăn tốt hơn.
                 </p>
               </div>
               <div className="card">
                 <div className="cardIcon">🛡️</div>
-                <h3 className="cardTitle">Giữ an toàn cho nhiều loài</h3>
+                <h3 className="cardTitle">Giảm rủi ro sinh học</h3>
                 <p className="cardText">
-                  Bảo tồn không chỉ giúp tê giác, mà còn bảo vệ cả môi trường xung quanh.
+                  Bảo tồn tê giác góp phần bảo vệ môi trường xung quanh.
                 </p>
               </div>
               <div className="card">
                 <div className="cardIcon">📣</div>
-                <h3 className="cardTitle">Học để hiểu đúng</h3>
+                <h3 className="cardTitle">Nâng hiểu biết cộng đồng</h3>
                 <p className="cardText">
-                  Khi bạn biết đúng, sẽ giúp giảm những hành vi gây hại.
+                  Kiến thức giúp giảm hành vi gây hại và tăng đồng thuận.
                 </p>
               </div>
             </div>
@@ -293,9 +298,10 @@ function App() {
         <section className="section sectionAlt" id="threats">
           <div className="sectionInner">
             <div className="sectionHead">
-              <h2 className="sectionTitle">Tại sao tê giác gặp nguy hiểm?</h2>
+              <h2 className="sectionTitle">Những yếu tố làm loài suy giảm</h2>
               <p className="sectionDesc">
-                Tê giác có thể bị săn bắt và mất nơi sống. Vì vậy cần bảo vệ từ sớm.
+                Loài có thể đối mặt với săn bắt trái phép và mất nơi sống, khiến
+                việc phục hồi trở nên khó khăn hơn.
               </p>
             </div>
 
@@ -328,9 +334,9 @@ function App() {
         <section className="section" id="actions">
           <div className="sectionInner">
             <div className="sectionHead">
-              <h2 className="sectionTitle">3 việc bạn có thể làm</h2>
+              <h2 className="sectionTitle">3 việc bạn có thể bắt đầu</h2>
               <p className="sectionDesc">
-                Bắt đầu từ những việc dễ làm: học đúng, nói đúng, và giúp người khác cùng biết.
+                Chỉ cần vài bước đơn giản để tham gia theo cách phù hợp.
               </p>
             </div>
 
@@ -353,7 +359,7 @@ function App() {
                 <div className="stepNum">3</div>
                 <h3 className="cardTitle">Góp sức bằng giáo dục</h3>
                 <p className="cardText">
-                  Học cùng nhau và lan tỏa kiến thức vui vẻ mỗi ngày.
+                  Cập nhật kiến thức, học thêm và lan tỏa thông tin đúng cách.
                 </p>
               </div>
             </div>
@@ -364,9 +370,10 @@ function App() {
           <div className="sectionInner">
             <div className="cta">
               <div className="ctaCopy">
-                <h2 className="sectionTitle">Nhận phiếu học tập (demo)</h2>
+                <h2 className="sectionTitle">Nhận bản tóm tắt (demo)</h2>
                 <p className="sectionDesc">
-                  Nhập email để nhận gợi ý hoạt động ở nhà. Đây là form minh họa (demo).
+                  Nhập email để nhận bản tóm tắt các việc thiết thực. Đây là
+                  form minh họa (demo).
                 </p>
               </div>
 
@@ -387,7 +394,7 @@ function App() {
                 </label>
 
                 <button type="submit" className="btn btnPrimary btnWide">
-                  Gửi email (demo)
+                  Nhận bản tóm tắt
                 </button>
 
                 <div
@@ -400,9 +407,9 @@ function App() {
                   }
                   aria-live="polite"
                 >
-                  {state === 'idle' && 'Chạm vào nút để bắt đầu nhé!'}
-                  {state === 'success' && 'Tuyệt vời! (demo) Mình đã nhận email của bạn.'}
-                  {state === 'error' && 'Email chưa đúng. Bạn thử lại nhé.'}
+                  {state === 'idle' && 'Mình sẽ gửi bản tóm tắt (demo).'}
+                  {state === 'success' && 'Thành công! (demo) Mình đã ghi nhận email.'}
+                  {state === 'error' && 'Email chưa đúng. Bạn kiểm tra lại giúp mình nhé.'}
                 </div>
               </form>
             </div>
@@ -416,7 +423,7 @@ function App() {
               <div>
                 <div className="footerTitle">Bảo tồn tê giác</div>
                 <div className="footerText">
-                  Trang mẫu giáo dục hoạt hình · Built with Vite + React
+                  Infographic anime/hoạt hình · Built with Vite + React
                 </div>
               </div>
             </div>
@@ -436,7 +443,7 @@ function App() {
                 className="linkBtn"
                 onClick={() => scrollTo('action')}
               >
-                Nhận phiếu học tập
+                Nhận bản tóm tắt
               </button>
             </div>
           </div>
