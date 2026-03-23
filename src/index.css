@@ -1,0 +1,115 @@
+:root {
+  --text: #2f4056;
+  --text-h: #0f2233;
+  --bg: #fff6f1;
+  --border: #f1d8dc;
+  --code-bg: #f7eef2;
+  --accent: #ff6b6b;
+  --accent-bg: rgba(255, 107, 107, 0.14);
+  --accent-border: rgba(255, 107, 107, 0.55);
+  --accent-2: #66c7ff;
+  --accent-3: #7ae582;
+  --social-bg: rgba(255, 107, 107, 0.08);
+  --shadow:
+    rgba(16, 24, 40, 0.08) 0 18px 60px -18px, rgba(16, 24, 40, 0.08) 0 4px 12px -2px;
+
+  --sans: 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Baloo 2', 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Giữ giao diện pastel như yêu cầu. */
+    --text: #2f4056;
+    --text-h: #0f2233;
+    --bg: #fff6f1;
+    --border: #f1d8dc;
+    --code-bg: #f7eef2;
+    --accent: #ff6b6b;
+    --accent-bg: rgba(255, 107, 107, 0.14);
+    --accent-border: rgba(255, 107, 107, 0.55);
+    --accent-2: #66c7ff;
+    --accent-3: #7ae582;
+    --social-bg: rgba(255, 107, 107, 0.08);
+    --shadow:
+      rgba(16, 24, 40, 0.08) 0 18px 60px -18px,
+      rgba(16, 24, 40, 0.08) 0 4px 12px -2px;
+  }
+
+  /* Template leftovers; page hiện tại không còn dùng #social. */
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  border: none;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
