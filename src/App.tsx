@@ -147,7 +147,11 @@ function App() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
     if (!el) return
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const topbar = document.querySelector<HTMLElement>('.topbar')
+    const headerHeight = topbar?.getBoundingClientRect().height ?? 0
+    const y =
+      el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' })
   }
 
   const onSubmit = (e: FormEvent) => {
