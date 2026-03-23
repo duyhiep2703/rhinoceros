@@ -56,77 +56,16 @@ function isValidEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())
 }
 
-function RhinoMascot() {
-  // Larger cheerful mascot for the hero card.
+function RhinoFigure() {
   return (
-    <svg
-      className="mascotSvg"
-      viewBox="0 0 240 200"
-      role="img"
-      aria-label="Tê giác hoạt hình"
-    >
-      <defs>
-        <linearGradient id="hornGrad" x1="0" x2="1">
-          <stop offset="0" stopColor="#FFD1A8" />
-          <stop offset="1" stopColor="#FFB37A" />
-        </linearGradient>
-        <linearGradient id="cheekGrad" x1="0" x2="1">
-          <stop offset="0" stopColor="#FF9AB4" />
-          <stop offset="1" stopColor="#FF7EA6" />
-        </linearGradient>
-      </defs>
-
-      {/* Floating bubbles */}
-      <circle cx="52" cy="44" r="18" fill="rgba(102,199,255,0.25)" />
-      <circle cx="190" cy="56" r="12" fill="rgba(255,107,107,0.20)" />
-      <circle cx="178" cy="148" r="16" fill="rgba(122,229,130,0.18)" />
-
-      {/* Body */}
-      <path
-        d="M118 24c-38 0-69 28-69 63 0 24 13 42 27 53l-7 28c-4 13 7 26 20 28l34 4c13 2 25-8 27-21l3-16h44l10 30c5 13 19 18 32 13l38-16c12-5 18-19 13-32l-12-32c23-16 37-41 37-68 0-35-29-66-71-66-11 0-22 2-32 6l-40 0z"
-        fill="#D9E1F0"
-        stroke="#173A52"
-        strokeWidth="4"
-        strokeLinejoin="round"
+    <figure className="rhinoFigure">
+      <img
+        className="rhinoImage"
+        src="/te-giac.jpg"
+        alt="Hình minh họa tê giác"
+        loading="lazy"
       />
-      {/* Horn */}
-      <path
-        d="M142 44c13-10 31-10 45 0-15 4-27 14-34 27-4-10-7-18-11-27z"
-        fill="url(#hornGrad)"
-        stroke="#173A52"
-        strokeWidth="4"
-        strokeLinejoin="round"
-      />
-      {/* Eyes */}
-      {/* Anime-style eyes */}
-      <circle cx="98" cy="98" r="12" fill="rgba(255,255,255,0.95)" />
-      <circle cx="136" cy="98" r="12" fill="rgba(255,255,255,0.95)" />
-      <circle cx="98" cy="98" r="8.2" fill="#2B4C6A" />
-      <circle cx="136" cy="98" r="8.2" fill="#2B4C6A" opacity="0.95" />
-      <circle cx="98" cy="98" r="4.1" fill="#0F2233" />
-      <circle cx="136" cy="98" r="4.1" fill="#0F2233" opacity="0.95" />
-      <circle cx="94.2" cy="94.4" r="2.1" fill="#ffffff" opacity="0.95" />
-      <circle cx="132.2" cy="94.4" r="2.1" fill="#ffffff" opacity="0.95" />
-
-      {/* Mouth */}
-      <path
-        d="M112 126c10 7 22 7 32 0"
-        fill="none"
-        stroke="#173A52"
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-
-      {/* Cheeks */}
-      <circle cx="86" cy="120" r="13" fill="url(#cheekGrad)" opacity="0.85" />
-      <circle
-        cx="148"
-        cy="120"
-        r="13"
-        fill="url(#cheekGrad)"
-        opacity="0.85"
-      />
-    </svg>
+    </figure>
   )
 }
 
@@ -232,7 +171,7 @@ function App() {
                 </div>
               </div>
               <div className="mascotWrap" aria-hidden="true">
-                <RhinoMascot />
+                <RhinoFigure />
               </div>
               <div className="heroStats">
                 <div className="stat">
@@ -332,6 +271,15 @@ function App() {
                 </p>
               </div>
             </div>
+
+            <div className="inlineRhino" aria-label="Hình minh họa tư liệu">
+              <img
+                className="inlineRhinoImg"
+                src="/te-giac-2.jpg"
+                alt="Ảnh minh họa tê giác trong tài liệu (demo)"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
 
@@ -424,12 +372,7 @@ function App() {
           <div className="footerInner">
             <div className="footerBrand">
               <RhinoMark />
-              <div>
-                <div className="footerTitle">Bảo tồn tê giác</div>
-                <div className="footerText">
-                  Infographic anime/hoạt hình · Built with Vite + React
-                </div>
-              </div>
+              <div className="footerTitle">Bảo tồn tê giác</div>
             </div>
             <div className="footerLinks">
               <button type="button" className="linkBtn" onClick={() => scrollTo('why')}>
