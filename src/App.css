@@ -36,12 +36,16 @@
 }
 
 .topbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.72);
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.88);
   border-bottom: 1px solid rgba(255, 107, 107, 0.22);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(15, 34, 51, 0.04);
   animation: topbarIn 650ms ease-out both;
 }
 
@@ -121,13 +125,13 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  padding: 0 20px;
+  padding: 76px 20px 0;
   box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
   .content {
-    padding: 0 40px;
+    padding: 76px 40px 0;
   }
 
   .topbarInner {
@@ -137,7 +141,7 @@
 
 @media (min-width: 1440px) {
   .content {
-    padding: 0 56px;
+    padding: 76px 56px 0;
   }
 
   .topbarInner {
@@ -146,7 +150,7 @@
 }
 
 .hero {
-  padding: 84px 0 40px;
+  padding: 28px 0 40px;
 }
 
 .heroGrid {
@@ -161,7 +165,6 @@
 
 .heroCopy {
   text-align: left;
-  animation: heroCopyIn 800ms ease-out both;
 }
 
 .eyebrow {
@@ -178,12 +181,17 @@
   letter-spacing: 0.04em;
 }
 
+.hero .eyebrow {
+  animation: fadeInUp 0.6s ease both;
+}
+
 .heroTitle {
   margin-top: 16px;
   margin-bottom: 14px;
   font-size: 46px;
   line-height: 1.03;
   letter-spacing: -0.01em;
+  animation: heroTitleIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .heroLead {
@@ -192,6 +200,7 @@
   font-size: 18px;
   line-height: 1.55;
   margin: 0;
+  animation: fadeInUp 0.65s ease 0.08s both;
 }
 
 .heroButtons {
@@ -199,6 +208,7 @@
   gap: 14px;
   flex-wrap: wrap;
   margin-top: 22px;
+  animation: fadeInUp 0.65s ease 0.16s both;
 }
 
 .heroNote {
@@ -401,28 +411,25 @@
   border-bottom: 1px solid rgba(255, 107, 107, 0.14);
 }
 
-#why.section {
-  animation-delay: 120ms;
-}
-
-#threats.section {
-  animation-delay: 240ms;
-}
-
-#actions.section {
-  animation-delay: 360ms;
-}
-
-#action.section {
-  animation-delay: 480ms;
+#javan.section {
+  animation-delay: 60ms;
+  padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 /* Tránh nội dung bị che bởi thanh điều hướng sticky khi bấm scroll */
 #top,
-#why,
-#threats,
-#actions,
-#action {
+#javan,
+#muc-1,
+#muc-1a,
+#muc-1b,
+#muc-2,
+#muc-3,
+#muc-5,
+#muc-6,
+#muc-1b-1,
+#muc-1b-2,
+#muc-1b-3 {
   scroll-margin-top: 96px;
 }
 
@@ -453,8 +460,298 @@
   gap: 16px;
 }
 
+.grid2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.javanSection {
+  max-width: min(1180px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8px;
+}
+
+.javanBlock {
+  margin-top: 44px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 107, 107, 0.1);
+}
+
+.javanBlock:last-of-type,
+.javanBlockLast {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.javanSection > .javanBlock:first-of-type {
+  margin-top: 0;
+}
+
+@keyframes heroTitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.javanH2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  color: rgba(15, 34, 51, 0.96);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.javanH3 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: rgba(15, 34, 51, 0.96);
+  letter-spacing: -0.01em;
+}
+
+.javanH4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: rgba(15, 34, 51, 0.96);
+}
+
+.javanCardTag {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 107, 107, 0.95);
+  margin-bottom: 8px;
+}
+
+.javanIntro1b {
+  margin-bottom: 14px;
+}
+
+.javanSubPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.javanSubPointDetails {
+  border-radius: 14px;
+  border: 1px solid rgba(47, 64, 86, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.javanSubPointDetails[open] {
+  border-color: rgba(255, 107, 107, 0.38);
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.1);
+}
+
+.javanSubPointSummary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.javanSubPointSummary::-webkit-details-marker {
+  display: none;
+}
+
+.javanSubPointSummary::marker {
+  content: '';
+}
+
+.javanSubPointMark {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(145deg, rgba(255, 107, 107, 1), rgba(255, 133, 99, 1));
+  border: 1px solid rgba(255, 107, 107, 0.5);
+}
+
+.javanSubPointTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(15, 34, 51, 0.96);
+  line-height: 1.35;
+  text-align: left;
+}
+
+.javanSubPointText {
+  margin: 0;
+  padding: 0 14px 14px;
+  padding-left: 54px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(47, 64, 86, 0.82);
+  animation: detailsBodyIn 0.35s ease both;
+}
+
+@keyframes detailsBodyIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.javanGrid {
+  align-items: stretch;
+}
+
+.javanSplit {
+  gap: 20px;
+}
+
+@media (min-width: 981px) {
+  .javanSplit {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.javanMedia {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto 20px;
+}
+
+.javanFigure {
+  margin: 0;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 107, 107, 0.22);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 36px rgba(16, 24, 40, 0.09);
+}
+
+.javanImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Ảnh trong thẻ mục 1a / 1b — cùng chiều cao, tỉ lệ 4:3 */
+.javanFigure--card {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 240px;
+  margin: 0 0 14px;
+}
+
+.javanFigure--card .javanImg {
+  height: 100%;
+}
+
+/* Ảnh ngang giữa các mục 2, 3, 5 */
+.javanFigure--banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: min(360px, 52vw);
+  margin: 0;
+}
+
+.javanFigure--banner .javanImg {
+  min-height: 0;
+}
+
+/* Dải 3 ảnh mục 6 */
+.javanFigure--strip {
+  aspect-ratio: 5 / 4;
+  max-height: 220px;
+  margin: 0;
+}
+
+.javanPhotoStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 auto 22px;
+  max-width: 920px;
+}
+
+.javanPhotoStrip .javanFigure--strip {
+  max-height: none;
+  height: 100%;
+  min-height: 160px;
+}
+
+.javanPhotoStrip .javanFigure--strip .javanImg {
+  min-height: 160px;
+}
+
+.javanCardGrid {
+  gap: 18px;
+}
+
+.gridBenefits {
+  margin-top: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 640px) {
+  .gridBenefits {
+    grid-template-columns: 1fr;
+  }
+
+  .javanFigure--banner {
+    max-height: none;
+    aspect-ratio: 16 / 10;
+  }
+
+  .javanFigure--card {
+    max-height: 200px;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.heroSlim {
+  padding-bottom: 28px;
+}
+
+.heroGridSingle {
+  grid-template-columns: 1fr;
+  max-width: 68rem;
+  margin: 0 auto;
 }
 
 .card {
@@ -666,8 +963,20 @@
     font-size: 40px;
   }
 
+  .grid2,
   .grid3 {
     grid-template-columns: 1fr;
+  }
+
+  .javanPhotoStrip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .javanPhotoStrip .javanFigure--strip {
+    aspect-ratio: 16 / 10;
+    min-height: 200px;
+    max-height: 280px;
   }
 
   .sectionTitle {
@@ -694,7 +1003,7 @@
 
 @media (max-width: 560px) {
   .content {
-    padding: 0 14px;
+    padding: 104px 14px 0;
   }
 
   .topbarInner {
@@ -705,7 +1014,7 @@
   }
 
   .hero {
-    padding: 64px 0 30px;
+    padding: 16px 0 30px;
   }
 
   .heroTitle {
